@@ -3,7 +3,8 @@
 namespace Pruebas\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Database\Eloquent\Model;
+use Pruebas\Users;
 class UserController extends Controller
 {
   public	function	addProfile()
@@ -35,16 +36,16 @@ class UserController extends Controller
     $anno =	$request->anno;
     $birthday = $dia.'/'.$mes.'/'.$anno;
     $photo = $request->photo;
-    DB::table('users')->insert(
-      ['firt_name'] -> $first_name,
-      ['last_name'] -> $last_name,
-      ['cedula'] -> $Ced,
-      ['email'] -> $email,
-      ['password'] -> $pass,
-      ['sex'] -> $sex,
-      ['education'] -> $Estudios,
-      ['profile'] -> $photo,
-      ['birthday'] -> $birthday
-    );
+    $registro = new Pruebas\Users;
+    $registro->firt_name = $first_name;
+    $registro->cedula = $Ced;
+    $registro->email = $email;
+    $registro->password = $pass;
+    $registro->sex = $sex;
+    $registro->education = $Estudios;
+    $registro->profile = $photo;
+    $registro->birthday = $birthday;
+    $registro->save();
+     return($registro);
   }
 }
