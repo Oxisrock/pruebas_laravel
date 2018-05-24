@@ -13,9 +13,6 @@
 
 Route::get('/', 'UserController@getIndex');
 // definicion de rutas
-Route::get('/users',	function()
-{
-				return	'¡Ruta para la vista de usuarios!';
-});
-Route::get('/users/add', 'UserController@addProfile');
-Route::post('/users','UserController@postProfile');
+Route::get('/users', 'UserController@getUsers');
+Route::get('/users/add', 'UserController@addUser');
+Route::post('/users','UserController@postUser');

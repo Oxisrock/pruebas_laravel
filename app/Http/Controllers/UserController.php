@@ -4,19 +4,19 @@ namespace Pruebas\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent;
-use App\User;
+use App\Users;
 class UserController extends Controller
 {
-  public	function	addProfile()
+  public	function	addUser()
   {
 
     return	view('add');
   }
-  public	function	getIndex()
-  {
-    return view('welcome');
+  public function getUsers() {
+    $data = DB::table('users')->get();
+    return	view('users')->with('users',$data);;
   }
-  public	function	postProfile(Request $request)
+  public	function	postUser(Request $request)
   {
     $first_name	=	$request->first_name;
     $last_name	=	$request->last_name;
