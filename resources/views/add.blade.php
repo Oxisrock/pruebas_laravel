@@ -14,7 +14,8 @@
 </head>
 <body>
   <section id="formulario">
-    <form id="form" class="" action="" method="post">
+    <form id="form" class="" action="{{url('users')}}" method="post">
+      {{csrf_field()}}
       <br>
       <label for="">Nombre: </label><input type="text" name="first_name" id="first_name" value="">
       <br>
@@ -30,8 +31,8 @@
       <br>
       <label	for="color">Sexo:</label>
       <br>
-      <input	type="radio"	name="color"	id="color"	value="rojo">Hombre<br>
-      <input	type="radio"	name="color"	id="color"	value="azul">Mujer<br>
+      <input	type="radio"	name="men"	id="men"	value="men">Hombre<br>
+      <input	type="radio"	name="women"	id="women"	value="women">Mujer<br>
       <br>
       <select	name="Estudios">
         <option	value="primaria">Primaria</option>

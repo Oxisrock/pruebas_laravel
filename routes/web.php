@@ -11,12 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'UserController@getIndex');
 // definicion de rutas
 Route::get('/users',	function()
 {
 				return	'¡Ruta para la vista de usuarios!';
 });
 Route::get('/users/add', 'UserController@addProfile');
+Route::post('/users','UserController@postProfile');
