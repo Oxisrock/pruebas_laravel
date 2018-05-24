@@ -4,7 +4,7 @@ namespace Pruebas\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
-use Pruebas\Users;
+use Pruebas\User;
 class UserController extends Controller
 {
   public	function	addProfile()
@@ -36,7 +36,7 @@ class UserController extends Controller
     $anno =	$request->anno;
     $birthday = $dia.'/'.$mes.'/'.$anno;
     $photo = $request->photo;
-    $registro = new Pruebas\Users;
+    $registro = Users::;
     $registro->firt_name = $first_name;
     $registro->cedula = $Ced;
     $registro->email = $email;
