@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+// definicion de rutas
+Route::get('/users',	function()
+{
+				return	'¡Ruta para la vista de usuarios!';
+});
+Route::get('/users/add',	function()
+{
+				return	view('add');
+});
