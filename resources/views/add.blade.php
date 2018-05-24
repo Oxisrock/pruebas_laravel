@@ -47,11 +47,11 @@
       <br>
       <label	for="color">Interes:</label>
       <br>
-      <label	for="color">Deportes:</label><input	type="checkbox"	name="color"	id="color"	value="">
-      <label	for="color">Noticias:</label><input	type="checkbox"	name="color"	id="color"	value="">
-      <label	for="color">Ocio:</label><input	type="checkbox"	name="color"	id="color"	value="">
-      <label	for="color">Negocios:</label><input	type="checkbox"	name="color"	id="color"	value="">
-      <label	for="color">Farandula:</label><input	type="checkbox"	name="color"	id="color"	value="">
+      <label	for="color">Deportes:</label><input	type="checkbox"	name="deportes"	id="color"	value="">
+      <label	for="color">Noticias:</label><input	type="checkbox"	name="Noticias"	id="color"	value="">
+      <label	for="color">Ocio:</label><input	type="checkbox"	name="Ocio"	id="color"	value="">
+      <label	for="color">Negocios:</label><input	type="checkbox"	name="Negocio"	id="color"	value="">
+      <label	for="color">Farandula:</label><input	type="checkbox"	name="Fanradula"	id="color"	value="">
       <br>
       <label for="">Día</label>
       <select	name="dia">

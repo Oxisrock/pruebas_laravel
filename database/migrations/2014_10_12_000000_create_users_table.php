@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('sex');
             $table->string('education');
-            $table->string('interest');
+            $table->string('interest')->nullable();
             $table->string('profile');
             $table->string('birthday');
             $table->rememberToken();
