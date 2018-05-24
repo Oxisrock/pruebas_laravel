@@ -19,7 +19,4 @@ Route::get('/users',	function()
 {
 				return	'¡Ruta para la vista de usuarios!';
 });
-Route::get('/users/add',	function()
-{
-				return	view('add');
-});
+Route::get('/users/add', 'UserController@addProfile');
