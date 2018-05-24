@@ -48,6 +48,6 @@ class UserController extends Controller
       'profile' => $photo,
       'birthday' => $birthday
     ]);
-    return();
+    return redirect('users');
   }
 }
